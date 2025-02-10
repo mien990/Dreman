@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievement</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(-45deg, #1a1a1a, #127878, #111);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: linear-gradient(90deg, #111, #222);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #00ffcc;
+        }
+
+        .navmenu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navmenu li {
+            margin-left: 20px;
+        }
+
+        .navmenu a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navmenu a:hover {
+            background-color: #00ffcc;
+            color: black;
+            transform: scale(1.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        /* Slider Styling */
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 16px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            width: 100%;
+            font-size: 14px;
+            margin-top: auto; /* Pushes the footer to the bottom */
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #00ffcc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <a href="#" class="logo">BEBAN</a>
+        <ul class="navmenu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Achievement</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Slider Section -->
+    <div class="slider">
+        <img src="images/sj1.jpg" alt="Achievement 1" id="slideImg">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Achievements Section -->
+    <div class="achievements-container">
+        <div class="achievement-box">
+            <img src="images/sj1.jpg" alt="sj1" id="img1" onclick="openModal('img1')">
+            <h3>Pertandingan Deklamasi Sajak 2014</h3>
+        </div>
+
+        <div class="achievement-box">
+            <img src="images/sj2.jpg" alt="sj2" id="img2" onclick="openModal('img2')">
+            <h3>Pertandingan Mnecari Info Sejarah 2021</h3>
+            <p>JOHAN</p>
+        </div>
+
+        <div class="achievement-box">
+            <img src="images/sj3.jpg" alt="sj3" id="img3" onclick="openModal('img3')">
+            <h3>Pertandingan Sejarah Sarawak 2021</h3>
+        </div>
+
+        <div class="achievement-box">
+            <img src="images/sj5.jpg" alt="sj5" id="img4" onclick="openModal('img4')">
+            <h3>Pertandingan Melukis Poster Secara Digital Sempena Program Kemerdekaan Peringkat Sekolah 2021</h3>
+        </div>
+
+        <div class="achievement-box">
+            <a href="https://heyzine.com/flip-book/896b6c3961.html" target="_blank">
+                <img src="images/MG.jpg" alt="MG">
+            </a>
+            <h3>Electronic Publishing (E-Magazine) 2024</h3>
+            <p>JOHAN</p>
+            <a href="https://heyzine.com/flip-book/896b6c3961.html" target="_blank">
+                <button>VIEW</button>
+            </a>
+        </div>
+
+        <div class="achievement-box">
+            <h3>Minggu Destinasi Siswa Competition</h3>
+            <iframe width="100%" height="200px" src="https://www.youtube.com/embed/cgbiCaA2xDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Second place</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Franklyn anak John. All Rights Reserved. <br> Website designed by <a href="#">Franklyn</a></p>
+    </footer>
+
+    <script>
+        // Function to open the modal
+        function openModal(imageId) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modal-img");
+            var img = document.getElementById(imageId);
+
+            modal.style.display = "block";
+            modalImg.src = img.src; // Set modal image source to the clicked image
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Slider functionality
+        let slideIndex = 0;
+
+        function changeSlide(direction) {
+            const images = ["images/sj1.jpg", "images/sj2.jpg", "images/sj3.jpg", "images/sj5.jpg"];
+            slideIndex = (slideIndex + direction + images.length) % images.length;
+            document.getElementById('slideImg').src = images[slideIndex];
+        }
+    </script>
+
+</body>
+</html>
+S
+            
